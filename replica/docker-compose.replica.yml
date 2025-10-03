@@ -1,0 +1,14 @@
+services:
+  mysql-replica:
+    image: mysql:8
+    container_name: mysql-replica
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+    volumes:
+      - replica-data:/var/lib/mysql
+      - ./replica-init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3307:3306"  
+      
+volumes:
+  replica-data:
