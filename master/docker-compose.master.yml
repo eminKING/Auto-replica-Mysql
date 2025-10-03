@@ -1,6 +1,6 @@
 services:
   mysql-master:
-    image: mysql:8
+    build: ./master
     container_name: mysql-master
     environment:
       MYSQL_ROOT_PASSWORD: rootpass
