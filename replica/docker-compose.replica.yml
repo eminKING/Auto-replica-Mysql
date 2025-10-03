@@ -1,6 +1,6 @@
 services:
   mysql-replica:
-    image: mysql:8
+    build: ./replica
     container_name: mysql-replica
     environment:
       MYSQL_ROOT_PASSWORD: rootpass
