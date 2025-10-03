@@ -1,6 +1,6 @@
 services:
   mysql-master:
-    build: ./master
+    build: .
     container_name: mysql-master
     environment:
       MYSQL_ROOT_PASSWORD: rootpass
