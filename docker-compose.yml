@@ -1,1 +1,26 @@
+services:
+  mysql-master:
+    build: ./master
+    container_name: mysql-master
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - master_data:/var/lib/mysql
 
+  mysql-replica:
+    build: ./replica
+    container_name: mysql-replica
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+    depends_on:
+      - mysql-master
+    ports:
+      - "3307:3306"
+    volumes:
+      - replica_data:/var/lib/mysql
+      
+volumes:
+  master_data:
+  replica_data:
