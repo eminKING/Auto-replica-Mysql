@@ -3,6 +3,7 @@ services:
     build: ./master
     container_name: mysql-master
     environment:
+      MYSQL_DATABASE: db
       MYSQL_ROOT_PASSWORD: rootpass
     ports:
       - "3306:3306"
