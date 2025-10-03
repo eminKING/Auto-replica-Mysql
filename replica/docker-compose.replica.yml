@@ -8,6 +8,7 @@ services:
       - replica-data:/var/lib/mysql
     ports:
       - "3307:3306"  
+    restart: unless-stopped
       
 volumes:
   replica-data:
