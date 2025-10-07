@@ -53,8 +53,8 @@ docker run hello-world
 Clone the repository and navigate to the project folder:
 
 ```bash
-git clone https://github.com/<your_username>/mysql-auto-replication.git
-cd mysql-auto-replication
+git clone https://github.com/eminKING/Auto-replica-Mysql.git
+cd Auto-replica-Mysql
 ```
 
 ### 3️⃣ Decide the Role
@@ -68,7 +68,7 @@ Determine the server's role:
 
 For the Replica node, you *must* replace `MASTER_IP` in `replica/init.sql` with the Master’s IP address.
 
-**File path:** `mysql-auto-replication/replica/init.sql`
+**File path:** `Auto-replica-Mysql/replica/init.sql`
 
 **Example:**
 
@@ -86,13 +86,13 @@ START REPLICA;
 * **Master:**
 
     ```bash
-    cd mysql-auto-replication
+    cd Auto-replica-Mysql/master
     ```
 
 * **Replica:**
 
     ```bash
-    cd mysql-auto-replication/replica
+    cd Auto-replica-Mysql/replica
     ```
 
 ### 6️⃣ Start Container with Build
